@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { BlogPost } from '../../lib/types';
+import { BlogPost } from '../../utils/types';
 import Link from 'next/link';
 
 interface BlogDetailContentProps {

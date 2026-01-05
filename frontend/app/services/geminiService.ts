@@ -1,5 +1,5 @@
 import { GoogleGenAI, Type } from '@google/genai';
-import { PROJECTS, EXPERIENCE, SKILLS } from '../lib/constants';
+import { PROJECTS, EXPERIENCE, SKILLS } from '../utils/constants';
 
 const API_KEY = process.env.GEMINI_API_KEY || '';
 

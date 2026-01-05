@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { Project } from '../../lib/types';
+import { Project } from '../../utils/types';
 import Link from 'next/link';
 
 interface ProjectDetailContentProps {

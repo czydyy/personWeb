@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { api } from '../../services/apiService';
-import { Project } from '../../lib/types';
+import { Project } from '../../utils/types';
 import ProjectLink from './ProjectLink';
 
 /**

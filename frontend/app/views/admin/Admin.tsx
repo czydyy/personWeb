@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { api } from '../../services/apiService';
-import { Project, Skill, BlogPost } from '../../lib/types';
+import { Project, Skill, BlogPost } from '../../utils/types';
 import { generateBlogPost } from '../../services/geminiService';
 
 const Admin = () => {

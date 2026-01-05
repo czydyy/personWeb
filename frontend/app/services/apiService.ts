@@ -8,7 +8,7 @@ import {
   ProjectExperience,
   BlogPost,
   Skill,
-} from '../lib/types';
+} from '../utils/types';
 import {
   EXPERIENCE,
   STUDY_EXPERIENCE,
@@ -17,7 +17,7 @@ import {
   PREWORK_EXPERIENCE,
   WORK_EXPERIENCE,
   SKILLS,
-} from '../lib/constants';
+} from '../utils/constants';
 
 const API_BASE = 'http://localhost:8000/api';
 
