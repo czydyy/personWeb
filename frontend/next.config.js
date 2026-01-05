@@ -9,7 +9,7 @@ const nextConfig = {
   },
   
   // 性能优化配置
-  swcMinify: true, // 使用SWC进行压缩，比Terser更快
+  // swcMinify 在 Next.js 15 中已移除，SWC 现在是默认的
   compiler: {
     // 移除开发环境中的console.log
     removeConsole: process.env.NODE_ENV === 'production',
@@ -19,11 +19,12 @@ const nextConfig = {
   experimental: {
     // 优化文件系统缓存
     scrollRestoration: true,
-    // 优化编译缓存
-    turbo: {
-      resolveAlias: {
-        // 优化模块解析
-      },
+  },
+  
+  // Turbopack 配置（替代 experimental.turbo）
+  turbopack: {
+    resolveAlias: {
+      // 优化模块解析
     },
   },
   
