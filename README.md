@@ -1,6 +1,6 @@
-# Nova - AI赋能个人作品集（全栈项目）
+# 个人作品集（全栈项目）
 
-一个现代化的全栈个人网站，集成了AI助手和后台管理系统，展示个人技能、项目经历和技术博客。
+一个现代化的全栈个人网站，集成了 AI 助手和后台管理系统，展示个人技能、项目经历和技术博客。
 
 ## 🏗️ 项目结构
 
@@ -31,6 +31,7 @@ personalWeb/
 ## 🚀 快速开始
 
 ### 1. 前端开发
+
 ```bash
 cd frontend
 # 使用pnpm（推荐）
@@ -41,9 +42,11 @@ pnpm dev
 # npm install
 # npm run dev
 ```
+
 前端将在 http://localhost:3000 运行
 
 ### 2. 后端开发
+
 ```bash
 cd backend
 # 创建虚拟环境（推荐）
@@ -61,42 +64,50 @@ cp .env.example .env
 # 启动服务
 uvicorn app.main:app --reload
 ```
-后端API将在 http://localhost:8000 运行
-API文档：http://localhost:8000/docs
 
-### 3. 使用Docker Compose（推荐）
+后端 API 将在 http://localhost:8000 运行
+API 文档：http://localhost:8000/docs
+
+### 3. 使用 Docker Compose（推荐）
+
 ```bash
 cd backend
 docker-compose up -d
 ```
+
 这将启动：
-- 后端API：http://localhost:8000
-- PostgreSQL数据库：localhost:5432
+
+- 后端 API：http://localhost:8000
+- PostgreSQL 数据库：localhost:5432
 - pgAdmin（数据库管理）：http://localhost:5050
 
 ## 🛠️ 技术栈
 
 ### 前端
+
 - **React 19** + **TypeScript** - 用户界面
 - **Vite 6** - 构建工具和开发服务器
 - **Tailwind CSS** - 样式框架
 - **React Router DOM v7** - 客户端路由
-- **Google Gemini API** - AI集成
+- **Google Gemini API** - AI 集成
 
 ### 后端
-- **FastAPI** - 高性能Python Web框架
-- **SQLAlchemy** + **Alembic** - 数据库ORM和迁移
+
+- **FastAPI** - 高性能 Python Web 框架
+- **SQLAlchemy** + **Alembic** - 数据库 ORM 和迁移
 - **PostgreSQL** / **SQLite** - 数据库
 - **JWT** - 认证系统
-- **Google Gemini API** - AI服务集成
+- **Google Gemini API** - AI 服务集成
 
 ### 部署
+
 - **Docker** + **Docker Compose** - 容器化部署
 - **Nginx** - 反向代理（生产环境）
 
 ## 📁 详细说明
 
 ### 前端结构
+
 ```
 frontend/
 ├── components/           # 可复用组件
@@ -116,6 +127,7 @@ frontend/
 ```
 
 ### 后端结构
+
 ```
 backend/
 ├── app/
@@ -144,61 +156,44 @@ backend/
 └── 部署和配置文件...
 ```
 
-## 🔗 API接口
+## 🔗 API 接口
 
 ### 认证
+
 - `POST /api/auth/login` - 管理员登录
 - `GET /api/auth/verify` - 验证令牌
 
 ### 项目管理
+
 - `GET /api/projects` - 获取所有项目
 - `POST /api/projects` - 创建项目（需认证）
 - `PUT /api/projects/{id}` - 更新项目（需认证）
 - `DELETE /api/projects/{id}` - 删除项目（需认证）
-- `POST /api/projects/generate` - AI生成项目描述（需认证）
+- `POST /api/projects/generate` - AI 生成项目描述（需认证）
 
 ### 博客管理
+
 - `GET /api/blogs` - 获取所有博客
 - `POST /api/blogs` - 创建博客（需认证）
 - `PUT /api/blogs/{id}` - 更新博客（需认证）
 - `DELETE /api/blogs/{id}` - 删除博客（需认证）
-- `POST /api/blogs/generate` - AI生成博客（需认证）
+- `POST /api/blogs/generate` - AI 生成博客（需认证）
 
 ### 简历管理
+
 - `GET /api/resume` - 获取简历数据
 - `POST /api/resume` - 更新简历数据（需认证）
-
-## 🐳 Docker部署
-
-### 开发环境
-```bash
-# 启动所有服务
-cd backend
-docker-compose up -d
-
-# 查看日志
-docker-compose logs -f api
-
-# 停止服务
-docker-compose down
-```
-
-### 生产环境
-1. 配置生产环境变量
-2. 构建Docker镜像
-3. 使用Nginx反向代理
-4. 配置SSL证书（HTTPS）
 
 ## 📚 文档
 
 - 前端文档：查看`frontend/README.md`
 - 后端文档：查看`backend/README.md`
-- API文档：启动后端后访问 http://localhost:8000/docs
+- API 文档：启动后端后访问 http://localhost:8000/docs
 - 技术栈设计：查看`backend/TECH_STACK_DESIGN.md`
 
 ## 🤝 贡献
 
-欢迎提交Issue和Pull Request来改进这个项目。
+欢迎提交 Issue 和 Pull Request 来改进这个项目。
 
 ## 📄 许可证
 
@@ -207,4 +202,4 @@ docker-compose down
 ---
 
 **技术栈**：React + TypeScript + FastAPI + PostgreSQL + Docker  
-**最后更新**：2025年12月
+**最后更新**：2025 年 12 月
