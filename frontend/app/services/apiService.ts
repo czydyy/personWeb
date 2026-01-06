@@ -10,12 +10,12 @@ import {
   Skill,
 } from '../utils/types';
 import {
-  EXPERIENCE,
   STUDY_EXPERIENCE,
   COMPETE_EXPERIENCE,
   HONOR_EXPERIENCE,
   PREWORK_EXPERIENCE,
   WORK_EXPERIENCE,
+  PROJECT_EXPERIENCE,
   SKILLS,
 } from '../utils/constants';
 
@@ -118,7 +118,7 @@ export const api = {
         honorExperience: HONOR_EXPERIENCE,
         preWorkExperience: PREWORK_EXPERIENCE,
         workExperience: WORK_EXPERIENCE,
-        projectExperience: EXPERIENCE,
+        projectExperience: PROJECT_EXPERIENCE,
         skills: SKILLS,
       };
     },

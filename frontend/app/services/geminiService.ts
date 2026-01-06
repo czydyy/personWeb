@@ -1,5 +1,5 @@
 import { GoogleGenAI, Type } from '@google/genai';
-import { PROJECTS, EXPERIENCE, SKILLS } from '../utils/constants';
+import { PROJECTS, WORK_EXPERIENCE, SKILLS } from '../utils/constants';
 
 const API_KEY = process.env.GEMINI_API_KEY || '';
 
@@ -14,7 +14,7 @@ export const getGeminiChatResponse = async (
   const ai = new GoogleGenAI({ apiKey: API_KEY });
   const resumeContext = `
     用户作品集上下文:
-    - 工作经验: ${JSON.stringify(EXPERIENCE)}
+    - 工作经验: ${JSON.stringify(WORK_EXPERIENCE)}
     - 项目案例: ${JSON.stringify(PROJECTS)}
     - 技能列表: ${JSON.stringify(SKILLS)}
   `;

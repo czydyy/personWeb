@@ -322,14 +322,10 @@ const ResumeContent = async () => {
                 <div className="absolute -left-[9px] top-1 w-4 h-4 bg-white border-2 border-blue-600 rounded-full group-hover:bg-blue-600 transition-colors"></div>
                 <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
                   <div>
-                    <h3 className="text-xl font-bold text-slate-900">{exp.role}</h3>
-                    <p className="text-blue-600 font-semibold">{exp.company}</p>
+                    <h3 className="text-xl font-bold text-slate-900">{exp.name}</h3>
                   </div>
-                  <span className="text-xs font-bold text-slate-500 mt-2 md:mt-0 px-3 py-1 bg-slate-100 rounded-full uppercase tracking-wider">
-                    {exp.period}
-                  </span>
                 </div>
-                <ul className="space-y-3">
+                <ul className="space-y-3 mb-4">
                   {exp.description.map((item, i) => (
                     <li key={i} className="text-slate-600 flex items-start gap-3 text-sm md:text-base">
                       <span className="text-blue-500 font-bold">•</span>
@@ -337,6 +333,17 @@ const ResumeContent = async () => {
                     </li>
                   ))}
                 </ul>
+                {/* 技术栈标签 */}
+                <div className="flex flex-wrap gap-2">
+                  {exp.technologies.map((tech) => (
+                    <span
+                      key={tech}
+                      className="px-3 py-1 bg-blue-50 border border-blue-200 rounded-full text-xs font-medium text-blue-700"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
               </div>
             ))}
           </div>
